@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'imports.sass'
+	
+//elements -> ids -> classes
+body
+	background-color: $background
+	margin: 0
+	*
+		outline: none
+		font-family: Consolas
+		color: $uno-1
+	a
+		color: $duo-1
+	u
+		text-decoration-color: $duo-2
+
+app-cli
+	display: flex
+	width: 100%
+	flex-direction: column-reverse
+	align-items: center
+	position: fixed
+	bottom: 0
+	background: linear-gradient(0deg, $background 55%, transparent)
+	
+app-project, app-text, app-contacts
+	display: flex
+	width: 100%
+	align-items: center
+	flex-direction: column
+	padding-bottom: 200px
+	&> *
+		width: 90%
+
+.wrapper
+	//display: grid
+	grid-template-columns: 285px 1fr
+	display: none
+
+.title
+	color: $duo-2
+
+.hidden
+	display: none
+
+.active
+	display: block !important
+
+.ascii
+	text-decoration: none !important
+	*:hover
+		color: $duo-1

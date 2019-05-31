@@ -1,0 +1,26 @@
+@import '../../../imports.sass'
+
+table
+	th
+		text-align: left
+	td, th
+		padding-right: 50px
+		&:before
+			content: '|'
+			margin-right: 25px
+			text-decoration: none
+
+.team
+	p
+		margin-bottom: 0
+	ul, li p
+		margin: 0
+
+.hover p
+	padding: 2px
+	background-color: $uno-5
+	color: $duo-1
+	position: absolute
+	
+.container
+	display: inline

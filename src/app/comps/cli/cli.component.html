@@ -1,0 +1,7 @@
+<input class="cli" placeholder="Enter some text" [(ngModel)]="searchText" (keyup.enter)="goto()">
+<ul class="terms">
+	<li *ngFor="let t of terms | filter: searchText ">
+    {{t}}
+  </li>
+</ul>
+<p>Try typing</p>

@@ -1,0 +1,12 @@
+<p> Projects </p>
+<p>hi</p>
+
+<ul>
+	<li *ngFor="let project of projects; let p = index">
+		<p class="name">{{project.name}}</p>
+		<p class="date">{{project.date | date: 'yyyy MMM'}}</p>
+		<a href="{{project.link}}" class="link" *ngIf="project.link != ''"> See it live </a>
+		<p class="desc">{{project.desc}}</p>
+		<img class="img" src="{{project.images[0]}}" alt="">
+	</li>
+</ul>

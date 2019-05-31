@@ -1,0 +1,82 @@
+//colors
+	//sourced from the duotone dark themes pack
+$background: #2E333E
+
+$uno-1: #d6e9ff
+$uno-2: #88b4e7
+$uno-3: #5d8cc0
+$uno-4: #586f89
+$uno-5: #444c55
+
+$duo-1: #34febb
+$duo-2: #32ae85
+$duo-3: #42675a
+
+//fonts
+
+
+
+//mixins
+
+$plus: $duo-1
+$cwidth: 1em
+$cheight: 1px
+$cmleft: -5px
+$cmtop: -1px
+
+.closed 
+	.vertical
+		transition: all 0.5s ease-in-out
+		transform: rotate(-90deg)
+	.horizontal
+		transition: all 0.5s ease-in-out
+		transform: rotate(-90deg)
+		opacity: 1
+
+.opened 
+	opacity: 1
+	.vertical 
+		transition: all 0.5s ease-in-out
+		transform: rotate(90deg)
+	.horizontal 
+		transition: all 0.5s ease-in-out
+		transform: rotate(90deg)
+		opacity: 0
+	
+.circle-plus 
+	height: 1em
+	width: 1em
+	font-size: 1em
+	opacity: .7
+	display: none
+	*
+		display: none
+.circle-plus .circle 
+	position: relative
+	width: $cwidth
+	height: $cwidth
+	border-radius: 100%
+	
+	//border: solid .5em #DFDAD7
+
+.circle-plus .circle .horizontal 
+	position: relative
+	background-color: $plus
+	width: $cwidth
+	height: $cheight
+	left: 50%
+	margin-left: 0 //$cmleft
+	top: 50%
+	margin-top: 0 //$cmtop
+
+.circle-plus .circle .vertical 
+	position: relative
+	background-color: $plus
+	width: $cheight
+	height: $cwidth
+	left: 50%
+	margin-left: $cwidth/2
+	top: 50%
+	margin-top: -$cwidth/2
+
+

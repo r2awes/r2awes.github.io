@@ -1,0 +1,81 @@
+<p> About </p>
+
+<div class="team">
+
+	<p class="title"> Team </p>
+
+	<ul>
+		<li>Richard McHorgh, owner</li>
+		<li (mouseover)="giphy = true"  class="hover"> <u> No one else, yet...</u>
+			<!--(mouseleave)="giphy = false"-->
+			<!--<p [style.display]="giphy ? 'none' : 'block'">
+				<i class="fas fa-arrow-up"></i>
+				hover here
+			</p>-->
+		</li>
+		<iframe [class.active]="giphy == true" src="https://giphy.com/embed/3oKIPzLXQYb2Bn5PLG" width="480" height="204" frameBorder="0" class="giphy-embed hidden" allowFullScreen></iframe>
+	</ul>
+	
+</div>
+
+<div class="bio">
+
+	<p class="title"> Bio </p>
+
+	<p>
+		Hi, I'm Richard, an amateur photographer, devoted automotive enthusiast, and most importantly, full stack developer, who has worked in the industry since mid-2014.
+	</p>
+
+	<div class="container">
+		<p>
+			I've <a routerLink="/projects">built and designed tons of websites</a> for clients 
+		
+			<u class="world" (mouseenter)="world = true; coords('u.world')" (mouseleave)="world = false">
+				all over the world
+			</u>
+			
+			and for all sizes of businesses. The challenges presented by these experiences have led me to learn a wide array of programming langauges and frameworks.
+		</p>
+
+		<div class="hidden hover" [class.active]="world">
+			<p [style.top]="(pos.top - 40) + 'px'" [style.left]="pos.left + 'px'" >from Indonesia to Britain and Canada to Argentina</p>
+		</div>
+	</div>
+	
+	
+</div>
+
+<div class="rates">
+	
+	<p class="title"> Rates </p>
+
+	<table>
+		<tr>
+			<th>Product</th>
+			<th>Pricing</th>
+			<th class="hover" (mouseenter)="ptime=true" (mouseleave)="ptime=false" >
+				<u>Ptimetable</u>
+				<p class="hidden" [class.active]="ptime == true" >
+					(the p is silent)
+				</p>
+			</th>
+		</tr>
+		<tr>
+			<td>Custom Site with less than 5 pages</td>
+			<td>250USD</td>
+			<td>7 days</td>
+		</tr>
+		<tr>
+			<td>Custom Wordpress Theme</td>
+			<td>400USD</td>
+			<td>7 to 10 days</td>
+		</tr>
+		<tr>
+			<td>Custom Wordpress/Shopify Theme with Ecommerce features</td>
+			<td>500USD</td>
+			<td>7 to 14 days</td>
+		</tr>
+	</table>
+
+	<p> Hosting for one year is included in all plans</p>
+</div>
